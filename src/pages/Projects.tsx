@@ -10,9 +10,12 @@ export default function Projects() {
           <ProjectCard
             key={project.title}
             title={project.title}
+            date={project.date}
             description={project.description}
-            technologies={project.techonologies}
+            highlights={project.highlights}
+            technologies={project.technologies}
             githubUrl={project.githubUrl}
+            externalUrl={project.externalUrl}
           />
         ))}
       </div>
