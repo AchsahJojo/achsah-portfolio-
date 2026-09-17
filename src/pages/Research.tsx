@@ -1,8 +1,23 @@
+const researchImages = [
+  { src: "/research_present_1st_time.png", alt: "Achsah presenting her research poster" },
+  { src: "/research_presenting.png", alt: "Achsah presenting research at a showcase" },
+  { src: "/research_presenting_oral.png", alt: "Achsah giving an oral research presentation" },
+];
+
 export default function Research() {
-  return (
-    <main className="mx-auto w-full max-w-3xl flex-1 px-6 py-16 text-left">
-      <h1>Research</h1>
-      <p className="mt-6">Research interests and publications will be added here.</p>
-    </main>
-  );
+  return <main className="research-page">
+    <section className="research-hero"><div><p className="eyebrow">Independent research</p><h1>AI Auto-Completion:<br /><em>Your Debugging Frenemy</em></h1><p className="research-lede">Exploring how AI code assistants shape the way students write, debug, and learn software.</p></div><div className="research-mark"><span>01</span><span>Human + machine</span><span>Critical thinking</span></div></section>
+
+    <section className="research-introduction"><p className="section-label">The question</p><div className="research-body"><p>My independent research began with a focus on GitHub Copilot’s role in web development and its impact on developers. As AI tools become more common, I became interested in the challenges they introduce: outdated code, suggestions that do not match a developer’s intent, and an over-reliance that can hinder critical thinking.</p><p>My research journey started during my early days as a front-end developer, when trusting Copilot to generate a template led to a syntax error that took hours to debug. That frustrating experience inspired me to investigate the errors AI commonly produces—and how programmers can recognize and address them effectively.</p></div></section>
+
+    <section className="antico-pilot-section"><div className="research-section-heading"><p className="eyebrow">The project</p><h2>Meet AntiCopilot.</h2><p>A VS Code extension built to deliberately make AI-assisted coding a little less predictable—and debugging a lot more instructive.</p></div><div className="antico-pilot-content"><div className="tool-card"><span className="tool-card-top">VS CODE EXTENSION / EXPERIMENTAL TOOL</span><div className="tool-card-icon">&lt;/&gt;</div><h3>AntiCopilot</h3><p>Simulating GitHub Copilot with a research-minded twist.</p><div className="tool-tags"><span>JavaScript</span><span>VS Code API</span><span>AI literacy</span></div></div><div className="research-body"><p>Over time, my focus shifted from professional developers to understanding how intermediate CS students debug AI-generated code. This transition lets me study both the errors Copilot produces and the human strategies students use to detect syntax, runtime, and logic issues.</p><p>AntiCopilot detects beginner Java patterns and replaces them with faulty suggestions for experimentation. It also implements ghost-style real-time cursor tracking, handles multi-line insertions and deletions, and manages variable naming and editor state across edge cases.</p><p>Building the tool taught me the importance of activation events, reactive editor behavior, and object-oriented problem solving.</p></div></div></section>
+
+    <section className="research-framework"><div className="framework-heading"><p className="section-label">Research framework</p><h2>From theory<br />to practice.</h2></div><div className="framework-grid"><article><span>01</span><h3>Coursework informs the lens</h3><p>Data science and advanced machine learning shape how I analyze AI-assisted programming. Model bias, feature importance, decision boundaries, overfitting, attention mechanisms, and optimization help me interpret errors as outcomes of training—not random mistakes.</p></article><article><span>02</span><h3>Controlled experiments</h3><p>This technical perspective guides how I design debugging experiments in AntiCopilot and analyze AI-generated errors systematically. It also helps me interpret student debugging behaviors through both cognitive and computational lenses.</p></article><article><span>03</span><h3>AI-aware debugging</h3><p>The goal is to help programmers, especially students, balance AI assistance with strong manual debugging skills and critical engagement with the tools they use every day.</p></article></div></section>
+
+    <section className="research-future"><div><p className="eyebrow">What’s next</p><h2>Making room for<br /><em>better questions.</em></h2></div><div className="research-body"><p>Doing this research daily has changed how I think about both AI and programming. As a student who uses Copilot in my own projects and a researcher who designs prompts that deliberately trick students into accepting faulty code, I’ve learned to see both sides.</p><p>Ongoing work includes collecting more data on AI-generated errors, surveying developers about learning strategies, and running workshops that promote critical engagement with AI-assisted coding.</p></div></section>
+
+    <section className="research-gallery"><div className="gallery-heading"><p className="section-label">Sharing the work</p><h2>Research in the room.</h2><p>Presenting this work at CSUMB’s 2025 Spring Showcase and Summer Research Symposium.</p></div><div className="research-images">{researchImages.map((image) => <figure key={image.src}><img src={image.src} alt={image.alt} /><figcaption>{image.alt}</figcaption></figure>)}</div></section>
+
+    <section className="research-cta"><p className="eyebrow">Otterly Curious Podcast</p><h2>Talking research,<br />one question at a time.</h2><p>Invited by Natasha Oehlman to discuss the undergraduate research process with future CSUMB students, peers, and faculty.</p></section>
+  </main>;
 }

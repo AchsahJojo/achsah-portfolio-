@@ -6,6 +6,8 @@ import Projects from "./pages/Projects";
 import Research from "./pages/Research";
 import Resume from "./pages/Resume";
 import Contact from "./pages/Contact";
+import AboutStory from "./pages/AboutStory";
+import Conferences from "./pages/Conferences";
 
 export default function App() {
   return (
@@ -15,6 +17,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/about/:story" element={<AboutStory />} />
+        <Route path="/conferences" element={<Conferences />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/research" element={<Research />} />
         <Route path="/resume" element={<Resume />} />
