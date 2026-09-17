@@ -8,6 +8,7 @@ import Resume from "./pages/Resume";
 import Contact from "./pages/Contact";
 import AboutStory from "./pages/AboutStory";
 import Conferences from "./pages/Conferences";
+import Writing from "./pages/Writing";
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/about/:story" element={<AboutStory />} />
         <Route path="/conferences" element={<Conferences />} />
+        <Route path="/writing" element={<Writing />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/research" element={<Research />} />
         <Route path="/resume" element={<Resume />} />

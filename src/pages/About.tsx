@@ -16,6 +16,6 @@ export default function About() {
 
     <section className="development-section"><div className="development-heading"><div><p className="eyebrow">Personal development</p><h2>Building community<br />along the way.</h2></div><p>Leadership has been another way I’ve learned to design for people: by listening, bringing the right voices together, and making room for others to grow.</p></div><div className="highlight-grid">{highlights.map((item) => <Link className="highlight-card" to={`/about/${item.slug}`} key={item.number}><span>{item.number}</span><h3>{item.title} <b>↗</b></h3><p>{item.text}</p></Link>)}</div></section>
 
-    <section className="about-cta"><p className="eyebrow">Let’s connect</p><h2>Have a shared interest<br />or an idea to explore?</h2><a href="mailto:ajojo@csumb.edu">I’d love to hear from you <span>↗</span></a></section>
+    <section className="about-cta"><p className="eyebrow">Let’s connect</p><h2>Have a shared interest<br />or an idea to explore?</h2><a href="mailto:achsahmaria.jojo@gmail.com">I’d love to hear from you <span>↗</span></a></section>
   </main>;
 }
