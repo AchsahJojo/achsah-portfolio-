@@ -18,39 +18,34 @@ export default function ProjectCard({
   externalUrl,
 }: ProjectCardProps) {
   return (
-    <article className="rounded-2xl border p-6 shadow-sm">
-      <div className="flex flex-wrap items-start justify-between gap-3">
-        <h2 className="text-xl font-semibold">{title}</h2>
-        <span className="text-sm text-gray-500">{date}</span>
+    <article className="project-card">
+      <div className="project-card-top">
+        <h2>{title}</h2>
+        <span className="project-date">{date}</span>
       </div>
-      <p className="mt-3 text-gray-600">{description}</p>
+      <p className="project-description">{description}</p>
 
-      <ul className="mt-4 list-disc space-y-2 pl-5 text-gray-600">
+      <ul className="project-highlights">
         {highlights.map((highlight) => (
           <li key={highlight}>{highlight}</li>
         ))}
       </ul>
 
-      <div className="mt-4 flex flex-wrap gap-2">
+      <div className="project-tags">
         {technologies.map((technology) => (
-          <span
-            key={technology}
-            className="rounded-full bg-gray-100 px-3 py-1 text-sm"
-          >
-            {technology}
-          </span>
+          <span key={technology}>{technology}</span>
         ))}
       </div>
 
-      <div className="mt-5 flex flex-wrap gap-4">
+      <div className="project-links">
         {githubUrl && (
-          <a className="underline" href={githubUrl} target="_blank" rel="noreferrer">
-            View on GitHub
+          <a href={githubUrl} target="_blank" rel="noreferrer">
+            View on GitHub <b>↗</b>
           </a>
         )}
         {externalUrl && (
-          <a className="underline" href={externalUrl} target="_blank" rel="noreferrer">
-            Learn more
+          <a href={externalUrl} target="_blank" rel="noreferrer">
+            Learn more <b>↗</b>
           </a>
         )}
       </div>
