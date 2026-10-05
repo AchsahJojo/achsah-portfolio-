@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 export default function Home() {
   return (
     <main className="home-page">
@@ -11,12 +13,12 @@ export default function Home() {
           problems easier to solve.
         </p>
         <div className="home-actions">
-          <a className="home-primary" href="/projects">
+          <Link className="home-primary" to="/projects">
             View my projects <span>↗</span>
-          </a>
-          <a className="home-secondary" href="/contact">
+          </Link>
+          <Link className="home-secondary" to="/contact">
             Get in touch
-          </a>
+          </Link>
         </div>
       </section>
     </main>

@@ -11,8 +11,10 @@ import Conferences from "./pages/Conferences";
 import Writing from "./pages/Writing";
 
 export default function App() {
+  const basename = import.meta.env.BASE_URL.replace(/\/$/, "") || "/";
+
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={basename === "/" ? undefined : basename}>
       <Navbar />
 
       <Routes>
