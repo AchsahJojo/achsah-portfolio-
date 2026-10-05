@@ -1,20 +1,34 @@
 import { NavLink } from "react-router";
 
+const links = [
+  { to: "/about", label: "About" },
+  { to: "/projects", label: "Projects" },
+  { to: "/research", label: "Research" },
+  { to: "/conferences", label: "Conferences" },
+  { to: "/writing", label: "Blog" },
+  { to: "/resume", label: "Resume" },
+  { to: "/contact", label: "Contact" },
+];
+
 export default function Navbar() {
   return (
-    <nav className="flex items-center justify-between px-6 py-5">
-      <NavLink to="/" className="text-xl font-bold">
+    <nav className="site-nav">
+      <NavLink to="/" className="site-logo" end>
         Achsah Jojo
       </NavLink>
 
-      <div className="flex gap-5">
-        <NavLink to="/about">About</NavLink>
-        <NavLink to="/projects">Projects</NavLink>
-        <NavLink to="/research">Research</NavLink>
-        <NavLink to="/conferences">Conferences</NavLink>
-        <NavLink to="/writing">Blog</NavLink>
-        <NavLink to="/resume">Resume</NavLink>
-        <NavLink to="/contact">Contact</NavLink>
+      <div className="site-nav-links">
+        {links.map((link) => (
+          <NavLink
+            key={link.to}
+            to={link.to}
+            className={({ isActive }) =>
+              isActive ? "nav-link active" : "nav-link"
+            }
+          >
+            {link.label}
+          </NavLink>
+        ))}
       </div>
     </nav>
   );

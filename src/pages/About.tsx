@@ -4,7 +4,7 @@ import { Link } from "react-router";
 const highlights = [
   { number: "01", slug: "kelp-your-neighbor", title: "Kelp Your Neighbor Hackathon", text: "Led the vision for a large-scale CSUMB hackathon, bringing together 42+ teams, 80+ attendees, and 10+ mentors from Google, Apple, and the wider community." },
   { number: "02", slug: "women-in-stem", title: "Women in STEM podcast", text: "Featured on Lunch with Leaders to discuss visibility and influence in tech, sharing the journey from uninvolved freshman to student leader with 6,000+ listeners." },
-  { number: "03", slug: "ottervoices", title: "OtterVoices: Student Spotlight", text: "Recognized by CSUMB for building meaningful campus connections and amplifying the student experience as President of Women in Computer Science." },
+  { number: "03", slug: "ottervoices", title: "OtterVoices: Student Spotlight", text: "Recognized by CSUMB for building meaningful campus connections and amplifying the student experience while serving as President of Women in Computer Science." },
   { number: "04", slug: "otterhacks", title: "OtterHacks", text: "Organized CSUMB’s first hackathon, partnered with Google for an #IAMRemarkable workshop, and launched an Unlock Open Source initiative." },
 ];
 
