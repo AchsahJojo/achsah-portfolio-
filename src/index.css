@@ -387,10 +387,8 @@ button, a { font: inherit; }
 .about-hero h1 { font-size: clamp(44px, 6vw, 72px); line-height: 1.03; letter-spacing: -3px; margin: 17px 0 25px; }
 .about-hero h1 em { color: var(--accent); font-style: normal; }
 .about-lede { max-width: 500px; font-size: 20px; line-height: 1.55; }
-.portrait-wrap { position: relative; width: 100%; max-width: 420px; justify-self: end; padding: 0 14px 14px 0; box-sizing: border-box; }
-.portrait-wrap img { position: relative; z-index: 1; display: block; width: 100%; aspect-ratio: 1 / 1.12; object-fit: cover; object-position: center top; border-radius: 48% 48% 3px 3px; filter: saturate(.9); }
-.portrait-wrap::before { content: ""; position: absolute; z-index: 0; inset: 0 14px 14px 0; border: 1.5px solid var(--accent-border); border-radius: 48% 48% 3px 3px; transform: translate(14px, 14px); pointer-events: none; }
-.portrait-note { display: block; margin-top: 18px; color: var(--accent); font-size: 12px; letter-spacing: .13em; text-transform: uppercase; }
+.portrait-wrap { width: 100%; max-width: 420px; justify-self: end; }
+.portrait-wrap img { display: block; width: 100%; aspect-ratio: 1 / 1.12; object-fit: cover; object-position: center top; border-radius: 48% 48% 3px 3px; filter: saturate(.9); }
 .about-story { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 72px; padding: 60px 0 84px; border-top: 1px solid var(--border); }
 .story-copy { max-width: 680px; columns: 2; column-gap: 38px; }
 .story-copy p { break-inside: avoid; margin-bottom: 20px; font-size: 16px; line-height: 1.7; }
